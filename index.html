@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <title>Quote Generator App</title>
 </head>
+
 <body>
     <!-- HTML 5 Header Tag -->
-    <header>
-        <h1>Quote Generator App</h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Quote Generator App</h1>
+        </header>
+        <!-- Container -->
+        <div class="quote-container">
+            <div class="quote-box">
+                <p id="quote">"Quote goes here..."</p>
+                <small id="author">- Author</small>
+            </div>
+            <button class="btn-white btn-mid">Generate</button>
+        </div>
+        <!-- Button -->
+    </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>

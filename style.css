@@ -1,66 +1,47 @@
-/* CSS RESET - JOSH M COMEAU*/
-/* Reset Source :- https://www.joshwcomeau.com/css/custom-css-reset/ */
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
+/* CSS RESET - */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  /*
-    2. Remove default margin
-  */
-  * {
+}
+
+* {
     margin: 0;
-  }
-  /*
-    3. Allow percentage-based heights in the application
-  */
-  html, body {
+}
+
+html,
+body {
     height: 100%;
-  }
-  /*
-    Typographic tweaks!
-    4. Add accessible line-height
-    5. Improve text rendering
-  */
-  body {
+}
+
+button {
+    font: inherit;
+}
+
+body {
+    width: 100%;
+    height: 100%;
     line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     margin: 0;
-    background-color: #0e141b;
-    min-height: 100vh;
-  }
-  /*
-    6. Improve media defaults
-  */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
-    7. Remove built-in form typography styles
-  */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
-    8. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
-    9. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
-
+    background-color: #000000;
+    color: white;
+    overflow: hidden;
+}
 
 /* App Stylings */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+
+}
+
 /* Linear Gradient Title */
-  h1{
+h1 {
     font-size: 2rem;
     font-weight: 100;
     letter-spacing: 2px;
@@ -70,15 +51,73 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-animation: hue 10s infinite linear;
-  }
+}
 
 
-  @-webkit-keyframes hue {
+@-webkit-keyframes hue {
     from {
-      -webkit-filter: hue-rotate(0deg);
+        -webkit-filter: hue-rotate(0deg);
     }
 
     to {
-      -webkit-filter: hue-rotate(-360deg);
+        -webkit-filter: hue-rotate(-360deg);
     }
-  }
+}
+
+
+/* Container Styling */
+.quote-container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-box {
+    border: 5px solid;
+    border-image: linear-gradient(45deg, purple, orange) 1;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+
+#quote {
+    color: whitesmoke;
+    text-align: center;
+}
+
+#author {
+    float: right;
+    color: gray;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Button styling */
+.btn-mid {
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+.btn-white {
+    border: solid 2px #fff;
+    background: transparent;
+    color: #fff !important;
+}
+
+.btn-white:hover {
+    border: solid 2px #fff;
+    background: #fff;
+    color: #1f1f1f !important;
+}
